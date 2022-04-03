@@ -6,7 +6,7 @@
 ################################################################################
 # OF ROOT
 #   The location of your root openFrameworks installation
-#       (default) OF_ROOT = ../../../../../Desktop/OF 
+#       (default) OF_ROOT = ../../../../Desktop/OF 
 ################################################################################
 OF_ROOT = /Users/dan/Desktop/OF
 
