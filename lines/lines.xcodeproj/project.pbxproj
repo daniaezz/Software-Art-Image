@@ -623,7 +623,6 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
-						<string>src</string>
 						<string>../../../../Desktop/OF/addons/ofxGui/src</string>
 					</array>
 					<key>MACOSX_DEPLOYMENT_TARGET</key>
@@ -665,7 +664,6 @@ fi
 					<key>HEADER_SEARCH_PATHS</key>
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
-						<string>src</string>
 						<string>src</string>
 						<string>../../../../Desktop/OF/addons/ofxGui/src</string>
 					</array>
@@ -3469,7 +3467,6 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
-						<string>src</string>
 						<string>../../../../Desktop/OF/addons/ofxGui/src</string>
 					</array>
 					<key>MACOSX_DEPLOYMENT_TARGET</key>
@@ -3531,7 +3528,6 @@ fi
 					<key>HEADER_SEARCH_PATHS</key>
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
-						<string>src</string>
 						<string>src</string>
 						<string>../../../../Desktop/OF/addons/ofxGui/src</string>
 					</array>
@@ -3668,7 +3664,6 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
-						<string>src</string>
 						<string>../../../../Desktop/OF/addons/ofxGui/src</string>
 					</array>
 					<key>ICON</key>
@@ -3720,7 +3715,6 @@ fi
 					<key>HEADER_SEARCH_PATHS</key>
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
-						<string>src</string>
 						<string>src</string>
 						<string>../../../../Desktop/OF/addons/ofxGui/src</string>
 					</array>
