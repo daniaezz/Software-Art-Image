@@ -22,22 +22,13 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-		
+    float xconst;
+    float yconst;
+    
     ofxPanel gui;
     
-    ofxIntSlider intSlider;
-    ofxFloatSlider floatSlider;
-    
-    ofxToggle toggle;
-    ofxButton button;
-    ofxLabel label;
-    
-    ofxIntField intField;
-    ofxFloatField floatField;
-    ofxTextField textField;
-    
-    ofxVec2Slider vec2Slider;
-    ofxVec3Slider vec3Slider;
-    ofxVec4Slider vec4Slider;
+    ofxIntSlider lines;
+    ofxIntSlider opacity;
+    ofxFloatSlider thick;
     
 };
