@@ -2,6 +2,8 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    //Some of this code was adapted from https://www.youtube.com/watch?v=XbiAGyodS3U&t=560s&ab_channel=LewisLepton
+    
     ofBackground(255);
     gui.setup();
     gui.add(lines.setup("numb of lines", 30, 1, 1000));
