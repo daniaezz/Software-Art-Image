@@ -19,17 +19,17 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     float time = ofGetElapsedTimef();
-    float yvar = 0.05;
-    float xvar = 0.03;
+    float yconst = 0.1;
+    float xconst = 0.03;
     ofSetLineWidth(thick);
-    yconst = ofNoise(yvar*time);
-    xconst = ofNoise(xvar*time);
+    yvar = ofNoise(yconst*time);
+    xvar = ofNoise(xconst*time);
 
     for (int i = 0; i < lines; i++){
-        ofDrawLine(xconst*ofGetWidth(),ofGetHeight()*ofNoise(time*0.3*(i+1)/2), ofGetWidth()* ofNoise(time*0.2*(i+1)/2),yconst*ofGetHeight() );
+        ofDrawLine(xvar*ofGetWidth(),ofGetHeight()*ofNoise(time*0.3*(i+1)/2), ofGetWidth()* ofNoise(time*0.2*(i+1)/2),yvar*ofGetHeight() );
     }
     
-    ofSetColor(ofNoise(time)*300, yconst*300, xconst*300, opacity);
+    ofSetColor(ofNoise(time)*300, yvar*300, xvar*300, opacity);
     gui.draw();
 }
 
