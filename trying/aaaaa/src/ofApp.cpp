@@ -7,7 +7,9 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+    for (int i=0; i<groupOfLines.size(); i++){
+        groupOfLines[i].update();
+    }
 }
 
 //--------------------------------------------------------------
@@ -38,21 +40,25 @@ void ofApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-    ofPoint pt;
-    pt.set(x,y);
-    line.addVertex(pt);
-    ofSetColor(ofRandom(255), ofRandom(255), ofRandom(255));
+    groupOfLines[index].addpts(x, y);
 
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-    line.clear();}
+//    line.clear();
+    Lines tempLine;
+    tempLine.setup();
+    groupOfLines.push_back(tempLine);
+    
+    
+}
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-    
-    groupOfLines.push_back(line);
+    index++;
+//    groupOfLines.push_back(tempLine);
+//    tempLine.setup();
 }
 
 //--------------------------------------------------------------
@@ -78,4 +84,37 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
+}
+
+//--------------------------------------------------------------
+Lines::Lines(){
+    
+};
+
+void Lines::setup(){
+    line.clear();
+    color.set(ofRandom(255), ofRandom(255), ofRandom(255));
+}
+
+void Lines::addpts(float _x, float _y){
+    ofPoint pt;
+    pt.set(_x,_y);
+    line.curveTo(pt);
+//    ofSetColor(ofRandom(255), ofRandom(255), ofRandom(255));
+   
+}
+
+void Lines::draw(){
+    ofSetColor(color);
+    line.draw();
+}
+
+void Lines::update(){
+    for (auto &vert : line.getVertices()){
+//        for (int deg = 0; deg < 360; deg++) {
+        vert.x += ofRandom(-0.5,0.5);
+        vert.y += ofRandom(-0.5,0.5);
+//        }
+        
+    }
 }

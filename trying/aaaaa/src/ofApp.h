@@ -2,6 +2,20 @@
 
 #include "ofMain.h"
 
+class Lines{
+public:
+    ofPolyline line;
+    ofColor color;
+//    vector<ofPolyline> groupOfLines;
+    
+    void setup();
+    void update();
+    void draw();
+    void addpts(float _x, float _y);
+
+    Lines();
+};
+
 class ofApp : public ofBaseApp{
 
 	public:
@@ -21,6 +35,9 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    ofPolyline line;
-    vector<ofPolyline> groupOfLines;
+    
+    vector<Lines> groupOfLines;
+//    Lines tempLine;
+    int index = 0;
+
 };
