@@ -21,7 +21,10 @@ void ofApp::setup(){
             
             groupOfShapes.push_back(tempShape);
             
-            std::cout << rr << endl;
+//            std::cout << rr << endl;
+            
+            
+            
         }
     }
 }
