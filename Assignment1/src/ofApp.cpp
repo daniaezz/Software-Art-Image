@@ -14,8 +14,8 @@ void ofApp::update(){
 void ofApp::draw(){
     rows = 5;
     cols = 5;
-    for (int i = 0; i<rows; i++ ){
-        for(int j=0; j<cols; j++){
+    for (int i = 0; i<rows+1; i++ ){
+        for(int j=0; j<cols+1; j++){
 //            ofFill(0);
             ofNoFill();
             ofSetColor(255);
