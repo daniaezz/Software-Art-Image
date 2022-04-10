@@ -8,16 +8,13 @@ void ofApp::setup(){
     ofBackground(255);
 //    ofSetCircleResolution(100);
     for( int i=1; i<rows-1; i++){
-        for(int j=1; j<rows-1; j++){
+        for(int j=1; j<cols-1; j++){
             
-            xedge = j*ofGetWidth()/rows;
+            xedge = j*ofGetWidth()/cols;
             yedge = i*ofGetHeight()/rows;
             rr = ofGetWidth()/rows/2;
             xmid = xedge+rr;
             ymid = yedge+rr;
-            
-            
-            
             
             Shape tempShape;
             tempShape.setup(xmid, ymid, xedge, yedge, rr );
@@ -38,7 +35,7 @@ void ofApp::update(){
 void ofApp::draw(){
 
 //    for( int i=0; i<rows+1; i++){
-//        for(int j=0; j<rows+1; j++){
+//        for(int j=0; j<cols+1; j++){
 //            ofNoFill();
 //            ofSetColor(255);
 //            ofSetLineWidth(5);
@@ -126,7 +123,7 @@ void Shape::setup(float _midx, float _midy, float _edgex, float _edgey, float r)
     radius = r;
 //    std::cout<<"type "<<type<<endl;
 //    std::cout<<"semi "<<semi<<endl;
-    colour.set(ofRandom(100, 150), ofRandom(50), ofRandom(100, 200));
+    colour.set(ofRandom(200, 255), ofRandom(150, 200), ofRandom(50));
 }
 
 void Shape::draw(){
