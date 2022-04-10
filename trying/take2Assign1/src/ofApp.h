@@ -1,6 +1,26 @@
 #pragma once
 
 #include "ofMain.h"
+#define ROWS 10
+#define COLS 10
+
+class Shape{
+public:
+    int type;
+    int semi;
+    float midx;
+    float midy;
+    float edgex;
+    float edgey;
+    float radius;
+    
+    ofColor colour;
+    
+    void setup(float _midx, float _midy, float _edgex, float _edgey, float r);
+    void draw();
+    
+    Shape();
+};
 
 class ofApp : public ofBaseApp{
 
@@ -23,4 +43,11 @@ class ofApp : public ofBaseApp{
 		
     int rows = 10;
     int cols = 10;
+    float xedge;
+    float yedge;
+    float xmid;
+    float ymid;
+    float rr;
+    
+    vector<Shape> groupOfShapes;
 };

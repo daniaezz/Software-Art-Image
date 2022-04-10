@@ -112,7 +112,7 @@ blob::blob(){
 void blob::setup(float _x, float _y, float _prevx, float _prevy){
     shape.clear();
     ofSetLineWidth(3);
-    color.set(ofRandom(255),ofRandom(255),ofRandom(255));
+    color.set(ofRandom(200),ofRandom(50),ofRandom(50));
     noPoints = (int)ofRandom(3, 10);
     for (int i=0; i<noPoints; i++){
         shape.curveTo(ofRandom(_prevx, _x), ofRandom(_prevy, _y));
