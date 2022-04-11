@@ -50,5 +50,4 @@ class ofApp : public ofBaseApp{
     float rr;
     
     vector<vector <Shape>> groupOfShapes;
-//    vector<Shape> rowOfShapes;
 };

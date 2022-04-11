@@ -4,9 +4,7 @@
 void ofApp::setup(){
     rows = 6;
     cols = 6;
-//    groupOfShapes.clear();
     ofBackground(255);
-//    ofSetCircleResolution(100);
     for( int i=1; i<rows-1; i++){
         vector<Shape> rowOfShapes;
         for(int j=1; j<cols-1; j++){
@@ -20,12 +18,7 @@ void ofApp::setup(){
             Shape tempShape;
             tempShape.setup(xmid, ymid, xedge, yedge, rr );
             
-            
             rowOfShapes.push_back(tempShape);
-            
-//            std::cout << rr << endl;
-            
-            
             
         }
         groupOfShapes.push_back(rowOfShapes);
@@ -40,46 +33,23 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-//    for( int i=0; i<rows+1; i++){
-//        for(int j=0; j<cols+1; j++){
-//            ofNoFill();
-//            ofSetColor(255);
-//            ofSetLineWidth(5);
-//
-//            ofDrawRectangle(j*ofGetWidth()/cols, i*ofGetHeight()/rows, ofGetWidth()/cols, ofGetHeight()/rows);
-//        }
-//    }
     ofFill();
-//    ofNoFill();
-//    ofSetColor(255, 100, 79);
     for (int i = 0; i<groupOfShapes.size(); i++){
         for (int j =0; j<groupOfShapes[i].size(); j++){
             
-//            if (groupOfShapes[i][j].type == 1 && groupOfShapes[i+1][j].type == 1){
-////                std::cout<<"yuh"<<endl;
-//                groupOfShapes[i+1][j].colour.set(groupOfShapes[i][j].colour);
-//                std::cout<<"first: "<<groupOfShapes[i][j].colour<<endl;
-//                std::cout<<"second: "<<groupOfShapes[i+1][j].colour<<endl;
-//
-//            }
-//
-//            if (groupOfShapes[i][j].type == 1 && groupOfShapes[i][j+1].type == 1){
-//                groupOfShapes[i][j+1].colour.set(groupOfShapes[i][j].colour);
-//            }
-            
-            if (i<groupOfShapes.size() && groupOfShapes[i][j].type == 1 && groupOfShapes[i+1][j].type > 1 && groupOfShapes[i+1][j].semi ==2){
+            if (i<groupOfShapes.size()-1 && groupOfShapes[i][j].type == 1 && groupOfShapes[i+1][j].type > 1 && groupOfShapes[i+1][j].semi ==2){
                 groupOfShapes[i+1][j].colour.set(groupOfShapes[i][j].colour);
             }
             
-            if (i<groupOfShapes.size() && groupOfShapes[i][j].type>1 && groupOfShapes[i+1][j].type == 1 && groupOfShapes[i][j].semi>2){
+            if (i<groupOfShapes.size()-1 && groupOfShapes[i][j].type>1 && groupOfShapes[i+1][j].type == 1 && groupOfShapes[i][j].semi>2){
                 groupOfShapes[i+1][j].colour.set(groupOfShapes[i][j].colour);
             }
             
-            if (j<groupOfShapes[i].size() && groupOfShapes[i][j].type == 1 && groupOfShapes[i][j+1].type > 1 && groupOfShapes[i][j+1].semi == 1){
+            if (j<groupOfShapes[i].size()-1 && groupOfShapes[i][j].type == 1 && groupOfShapes[i][j+1].type > 1 && groupOfShapes[i][j+1].semi == 1){
                 groupOfShapes[i][j+1].colour.set(groupOfShapes[i][j].colour);
             }
             
-            if (j<groupOfShapes[i].size() && groupOfShapes[i][j].type > 1 && groupOfShapes[i][j+1].type == 1 && groupOfShapes[i][j].semi == 0){
+            if (j<groupOfShapes[i].size()-1 && groupOfShapes[i][j].type > 1 && groupOfShapes[i][j+1].type == 1 && groupOfShapes[i][j].semi == 0){
                 groupOfShapes[i][j+1].colour.set(groupOfShapes[i][j].colour);
             }
             
@@ -180,7 +150,7 @@ void Shape::draw(){
             ofDrawCircle(midx, midy, radius);
             ofDrawRectangle(edgex, edgey, radius, radius*2);
         } else if(semi == 2){
-//            rect on top
+            //rect on top
             ofDrawCircle(midx, midy, radius);
             ofDrawRectangle(edgex, edgey , radius*2, radius);
         } else{
