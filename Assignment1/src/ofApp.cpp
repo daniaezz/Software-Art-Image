@@ -67,19 +67,19 @@ void ofApp::draw(){
 //                groupOfShapes[i][j+1].colour.set(groupOfShapes[i][j].colour);
 //            }
             
-            if (groupOfShapes[i][j].type == 1 && groupOfShapes[i+1][j].type > 1 && groupOfShapes[i+1][j].semi ==2){
+            if (i<groupOfShapes.size() && groupOfShapes[i][j].type == 1 && groupOfShapes[i+1][j].type > 1 && groupOfShapes[i+1][j].semi ==2){
                 groupOfShapes[i+1][j].colour.set(groupOfShapes[i][j].colour);
             }
             
-            if (groupOfShapes[i][j].type>1 && groupOfShapes[i+1][j].type == 1 && groupOfShapes[i][j].semi>2){
+            if (i<groupOfShapes.size() && groupOfShapes[i][j].type>1 && groupOfShapes[i+1][j].type == 1 && groupOfShapes[i][j].semi>2){
                 groupOfShapes[i+1][j].colour.set(groupOfShapes[i][j].colour);
             }
             
-            if (groupOfShapes[i][j].type == 1 && groupOfShapes[i][j+1].type > 1 && groupOfShapes[i][j+1].semi == 1){
+            if (j<groupOfShapes[i].size() && groupOfShapes[i][j].type == 1 && groupOfShapes[i][j+1].type > 1 && groupOfShapes[i][j+1].semi == 1){
                 groupOfShapes[i][j+1].colour.set(groupOfShapes[i][j].colour);
             }
             
-            if (groupOfShapes[i][j].type > 1 && groupOfShapes[i][j+1].type == 1 && groupOfShapes[i][j].semi == 0){
+            if (j<groupOfShapes[i].size() && groupOfShapes[i][j].type > 1 && groupOfShapes[i][j+1].type == 1 && groupOfShapes[i][j].semi == 0){
                 groupOfShapes[i][j+1].colour.set(groupOfShapes[i][j].colour);
             }
             
@@ -142,7 +142,7 @@ void ofApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::dragEvent(ofDragInfo dragInfo){
 
 }
 
