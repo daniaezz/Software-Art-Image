@@ -17,7 +17,7 @@ void ofApp::draw(){
     ofSetColor(255, 207, 90, 70);
     for (int i=0; i<rows; i++){
         for (int j=0; j<cols; j++){
-            ofDrawCircle(i*ofGetWidth()/cols+ofGetWidth()/cols/2, j*ofGetHeight()/rows+ofGetWidth()/cols/2, 100*sin(i/3+2*ofGetElapsedTimef()));
+            ofDrawCircle(i*ofGetWidth()/cols+ofGetWidth()/cols/2, j*ofGetHeight()/rows+ofGetWidth()/cols/2, 100*sin(i/3*ofGetElapsedTimef()));
         }
     }
 }
