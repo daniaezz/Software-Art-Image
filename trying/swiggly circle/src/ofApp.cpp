@@ -2,7 +2,6 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofSetBackgroundColor(0);
 
 }
 
@@ -13,18 +12,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    
-    float opacity = 150;
-    
-    ofSetColor(227, 94, 103, opacity);
-    ofDrawCircle(300*ofNoise(ofGetElapsedTimef()*0.6)+ofGetWidth()/2, 300*ofNoise(ofGetElapsedTimef()*0.2)+ofGetHeight()/2, 100);
-    ofSetColor(111   , 74   , 236    , opacity);
-    
-    ofDrawCircle(300*ofNoise(ofGetElapsedTimef()*0.3)+ofGetWidth()/2, 300*ofNoise(ofGetElapsedTimef()*0.9)+ofGetHeight()/2, 100);
-    
-    ofSetColor(168   , 236   , 136, opacity);
-    
-    ofDrawCircle(300*ofNoise(ofGetElapsedTimef()*0.5)+ofGetWidth()/2, 300*ofNoise(ofGetElapsedTimef()*0.4)+ofGetHeight()/2, 100);
+
 }
 
 //--------------------------------------------------------------
