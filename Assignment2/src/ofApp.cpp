@@ -22,8 +22,8 @@ void ofApp::draw(){
     rot ++;
     float time = ofGetElapsedTimef();
     
-    if(exp<=45){
-        centre = ofPoint(ofNoise(time*ofNoise(0.8))*ofGetWidth() - ofGetWidth()/2, ofNoise(time*ofNoise(0.4))*ofGetHeight() - ofGetHeight()/2);
+    if(swigg){
+        centre = ofPoint(ofNoise(time*ofNoise(0.8))*ofGetWidth()*1.5 - ofGetWidth()/1.2, ofNoise(time*ofNoise(0.4))*ofGetHeight() - ofGetHeight()/2);
     }
     else{
         centre = ofPoint(ofNoise(time*ofNoise(0.8))*ofGetWidth()/2 - ofGetWidth()/3.5, ofNoise(time*ofNoise(0.4))*ofGetHeight() - ofGetHeight()/2);
@@ -149,13 +149,13 @@ void ofApp::draw(){
                 ofDrawCircle(-cos(ofDegToRad(i))*ofGetWidth()/exp*(pow(sin(5*ofDegToRad(i+rot)), 2)+ 20), ofGetHeight()/exp*-sin(ofDegToRad(i))*(pow(sin(5*ofDegToRad(i+rot)), 2)+20), 3);
             }
         
-        ofPushMatrix();
-        ofRotateZDeg(rot);
-        ofSetColor(242  ,  191  ,  186 );
-        for (int i = 0; i<180; i++) {
-            ofDrawCircle(cos(ofDegToRad(i))*ofGetWidth()/exp*(pow(cos(5*ofDegToRad(i+rot)), 2)+ 20), ofGetHeight()/exp*sin(ofDegToRad(i))*(pow(cos(5*ofDegToRad(i+rot)), 2)+20), 5);
-        }
-        ofPopMatrix();
+//        ofPushMatrix();
+//        ofRotateZDeg(rot);
+//        ofSetColor(242  ,  191  ,  186 );
+//        for (int i = 0; i<180; i++) {
+//            ofDrawCircle(cos(ofDegToRad(i))*ofGetWidth()/exp*(pow(cos(5*ofDegToRad(i+rot)), 2)+ 20), ofGetHeight()/exp*sin(ofDegToRad(i))*(pow(cos(5*ofDegToRad(i+rot)), 2)+20), 5);
+//        }
+//        ofPopMatrix();
 //        }
 //        ofEndShape(TRUE);
     }
@@ -180,9 +180,9 @@ void ofApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-    if (exp>45) {
-        exp--;
-    }
+//    if (exp>45) {
+//        exp--;
+//    }
 }
 
 //--------------------------------------------------------------
