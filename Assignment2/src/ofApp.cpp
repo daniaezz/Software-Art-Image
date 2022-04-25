@@ -26,7 +26,7 @@ void ofApp::draw(){
         centre = ofPoint(ofNoise(time*ofNoise(0.8))*ofGetWidth()*1.5 - ofGetWidth()/1.2, ofNoise(time*ofNoise(0.4))*ofGetHeight() - ofGetHeight()/2);
     }
     else{
-        centre = ofPoint(ofNoise(time*ofNoise(0.8))*ofGetWidth()/2 - ofGetWidth()/3.5, ofNoise(time*ofNoise(0.4))*ofGetHeight() - ofGetHeight()/2);
+        centre = ofPoint(ofNoise(time*ofNoise(0.8))*ofGetWidth()/2 - ofGetWidth()/3.2, ofNoise(time*ofNoise(0.4))*ofGetHeight() - ofGetHeight()/2);
     }
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
@@ -72,7 +72,7 @@ void ofApp::draw(){
                 opacity -- ;
             }
         }
-        ofCurveVertex(vert[i]);
+        ofVertex(vert[i]);
     }
 //    ofVertex (vert[vert.size()]);
     ofEndShape(TRUE);
@@ -104,7 +104,7 @@ void ofApp::draw(){
 
         }
         
-        ofCurveVertex(vert[i]);
+        ofVertex(vert[i]);
     }
     ofEndShape(TRUE);
 
@@ -135,7 +135,7 @@ void ofApp::draw(){
 
         }
         
-        ofCurveVertex(vert[i]);
+        ofVertex(vert[i]);
     }
     
     
@@ -148,6 +148,7 @@ void ofApp::draw(){
             for (int i = 0; i<360; i++) {
                 ofDrawCircle(-cos(ofDegToRad(i))*ofGetWidth()/exp*(pow(sin(5*ofDegToRad(i+rot)), 2)+ 20), ofGetHeight()/exp*-sin(ofDegToRad(i))*(pow(sin(5*ofDegToRad(i+rot)), 2)+20), 3);
             }
+
         
 //        ofPushMatrix();
 //        ofRotateZDeg(rot);
