@@ -6,3 +6,5 @@ This app explores the concept of the comfort zone. At the beginning of the anima
 
 Prior to user interaction, the colours of the distortion are set to be bright and saturated, bringing attention to themselves by creating a contrast against the background. The colours used for the distortion are red, green and blue. They sit on top of each other with red on the very top to give off the feeling that something is wrong as red is usually used as an indication of a warning. These colours change upon user interaction into a pastel yellow, to give off a more relaxed feeling as opposed to the highly saturated colours used for the distortion. 
 
+<img width="739" alt="Screen Shot 2022-04-25 at 1 18 54 PM" src="https://user-images.githubusercontent.com/90758857/165059709-5004a736-6519-4e18-b0a0-4415ecf4f064.png">
+<img width="753" alt="Screen Shot 2022-04-25 at 1 18 14 PM" src="https://user-images.githubusercontent.com/90758857/165059724-546e61f4-03af-414a-b6fe-67fa83652f61.png">
