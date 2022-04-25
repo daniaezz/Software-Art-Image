@@ -1,0 +1,8 @@
+# [Comfort Zone](https://youtu.be/0A-4VrujjUk)
+
+This app explores the concept of the comfort zone. At the beginning of the animation, the ball moves slowly within the “comfort zone”. At this stage, the comfort zone is shown as a dim barrier that the ball might not be aware of, showing how often we don’t realise we’re trapped within our comfort zones. As the ball moves closer to the barrier, its opacity increases and it starts becoming distorted in a rigid motion. The movement of the ball after interacting with the barrier can be deciphered in different ways. The ball would sometimes continue interacting with different parts of the barrier, testing its limit and other times it would take a step back and stay within the comfort zone. On user interaction, the barrier becomes more fluid and the ball moves with more freedom, oftentimes venturing outside this comfort zone. The barrier doesn’t disappear as to indicate that we will always have a comfort zone, but we shouldn’t let it confine us. The fluidness and motion of the barrier is meant to indicate how this comfort zone changes. I tried experimenting with having the size of the barrier change but it did not seem as coherent. 
+
+
+
+Prior to user interaction, the colours of the distortion are set to be bright and saturated, bringing attention to themselves by creating a contrast against the background. The colours used for the distortion are red, green and blue. They sit on top of each other with red on the very top to give off the feeling that something is wrong as red is usually used as an indication of a warning. These colours change upon user interaction into a pastel yellow, to give off a more relaxed feeling as opposed to the highly saturated colours used for the distortion. 
+
