@@ -49,5 +49,7 @@ class ofApp : public ofBaseApp{
     float ymid;
     float rr;
     
+    ofColor colour;
+    
     vector<vector <Shape>> groupOfShapes;
 };
