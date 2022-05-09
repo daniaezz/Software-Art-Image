@@ -41,7 +41,7 @@ void ofApp::setup(){
     gui.add(basePianoSlider.setup("base piano (soft)", 100, 0, 100));
     gui.add(drumToggle.setup("drums", false));
     
-    
+    //adds two circles to the vector to avoid errors
     for (int j  = 0; j < 360; j += 180 ){
         startCircle temp2;
         temp2.setup(time, cos(ofDegToRad(j))*ofGetHeight()/3,  sin(ofDegToRad(j))*ofGetHeight()/3, drums);
@@ -60,10 +60,12 @@ void ofApp::update(){
     
     eee = fmod(time,5);
     
+    //volume is based on the gui
     track2.setVolume(elaboratePianoSlider/10);
     track7.setVolume(basePianoSlider/10);
     track8.setVolume(bassSlider/10);
     
+    //displays the snare drum effect depending on the beat of the sound if the bass sound is not playing and clears the array if bass is playing
     if(!snareDrum){
         individualSnares.clear();
     }
@@ -92,7 +94,7 @@ void ofApp::update(){
         drums.set(255);
     }
     
-    
+    //displayes the base piano circles over time, the number of circles increases and decreases with the beat
     if(time7/1000 >= arr7[index7]){
         points.clear();
             circles.clear();
@@ -104,6 +106,7 @@ void ofApp::update(){
         if(waves>20 && !reverse){
             waves/=2;
         } else{
+            //decreases the number of circles on screen
             reverse = TRUE;
             waves*=2;
         }
@@ -121,6 +124,7 @@ void ofApp::update(){
         }
     }
 
+    //displays the bass effect (shape in the middle of the screen) based on the beat of the sound
     if(time8/1000 >= arr8[index8]){
         targetPoints.clear();
         if (index8<=0){
@@ -158,12 +162,14 @@ void ofApp::update(){
         }
     }
     
+    //triggers snare effect
     if (track18.getVolume()>=0.01){
         snare = TRUE;
     } else{
         snare = FALSE;
     }
 
+    //changes the colour of veerything every other drum beat and changes it to white in between
     if (time23/1000 >= arr23[index23] && drumToggle){
         
 
@@ -183,7 +189,7 @@ void ofApp::update(){
         }
     }
 
-    
+    //roatates the shape based on the value from the piano slider
     if (track2.getVolume()>=0.01){
         rotation+=elaboratePianoSlider/150;
         clearAlpha = 50;
@@ -209,6 +215,8 @@ void ofApp::draw(){
     
 
     ofSetColor(drums);
+    
+    //draws the circles that are accompanied by the base piano sound
     if (track7.getVolume()>=0.01){
         for (int i = 0; i<circles2.size(); i++){
             circles2[i].draw();
@@ -217,6 +225,7 @@ void ofApp::draw(){
     
     ofNoFill();
     
+    //chnages the shape edges to be jaggered if the snare sound is playing and smooth if its not playing
     if (snare && track8.getVolume()>=0.01){
         for (int j  = 0; j < 360; j += waves ){
             ofPushMatrix();
@@ -285,7 +294,7 @@ void ofApp::draw(){
         }
     }
     
-    
+    //displays the snares if the bass is not playing
     for (int i = 0; i< individualSnares.size(); i++){
         individualSnares[i].draw();
         
